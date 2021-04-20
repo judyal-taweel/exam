@@ -1,0 +1,17 @@
+body{
+    background-color: burlywood;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ul li {
+    display: inline;
+}

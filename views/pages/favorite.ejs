@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../layout/head.ejs') %>
+
+<body>
+    <%- include('../layout/header.ejs') %>
+
+    <main>
+        <%data.forEach(element =>{%>
+            <h3><%=element.name%></h3>
+            <h3><%=element.house%></h3>
+            <h3><%=element.patronus%></h3>
+            <h3><%=element.alive%></h3>
+
+            <a href="/details/<%=element.id%>">details</a>
+        <%})%>
+    </main>
+</body>
+</html>

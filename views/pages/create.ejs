@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../layout/head.ejs') %>
+
+<body>
+    <%- include('../layout/header.ejs') %>
+    <main>
+        <form action="/create" method="POST">
+            <input type="text" name="name" >
+            <input type="text" name="house" >
+            <input type="text" name="patronus" >
+            <input type="text" name="alive" >
+            <button type="submit">create</button>
+
+        </form>
+    </main>
+    
+</body>
+</html>

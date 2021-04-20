@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../layout/head.ejs') %>
+
+<body>
+    <%- include('../layout/header.ejs') %>
+
+    <main>
+        <%character.forEach(data =>{%>
+            <div>
+          <h3><%=data.name%></h3>
+          <h3><%=data.house%></h3>
+          <h3><%=data.patronus%></h3>
+          <h3><%=data.alive%></h3>
+
+          <form action="/addFav" method="POST">
+              <input type="hidden" name="name" value="<%=data.name%>">
+              <input type="hidden" name="house" value="<%=data.house%>">
+              <input type="hidden" name="patronus" value="<%=data.patronus%>">
+              <input type="hidden" name="alive" value="<%=data.alive%>">
+              <button type="submit">add fav</button>
+
+          </form>
+        </div>
+
+       <% })%>
+    </main>
+</body>
+</html>

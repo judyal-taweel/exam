@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../layout/head.ejs') %>
+
+<body>
+    <%- include('../layout/header.ejs') %>
+
+
+    <main>
+        <% data.forEach(element =>{%>
+            <h3><%=element.name%></h3>
+            <h3><%=element.house%></h3>
+            <h3><%=element.patronus%></h3>
+            <h3><%=element.alive%></h3>
+
+            <form action="/details/<%=element.id%>?_method=DELETE" method="POST">
+            <button type="submit">delete</button>
+            </form>
+
+            <form action="/details/<%=element.id%>?_method=PUT" method="POST">
+                <input type="text" name="name" value="<%=element.name%>">
+                <input type="text" name="house" value="<%=element.house%>">
+                <input type="text" name="patronus" value="<%=element.patronus%>">
+                <input type="text" name="alive" value="<%=element.is_alive%>">
+                <button type="submit">update</button>
+            </form>
+            <%})%>
+    </main>
+    
+</body>
+</html>
